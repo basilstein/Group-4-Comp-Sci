@@ -1,1 +1,70 @@
+<!doctype html>
 
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Group 4 Data Collector</title>
+	<link rel="stylesheet" href="layout.css" type="text/css">
+	<script type = "text/javascript">
+		if (!localStorage.getItem("upstairs")){
+			var upstairs = new Object();
+			upstairs.startTemp = [];
+			upstairs.endTemp = [];
+			upstairs.bestFit = [];
+			upstairs.highestRate = [];
+			localStorage.setItem("upstairs",JSON.stringify(upstairs))
+		}
+		if (!localStorage.getItem("flat")){
+			var flat = new Object();
+			flat.startTemp = [];
+			flat.endTemp = [];
+			flat.bestFit = [];
+			flat.highestRate = [];
+			localStorage.setItem("upstairs",JSON.stringify(upstairs))
+		}
+		function data(){
+			var type;
+			var upstairs = JSON.parse(localStorage.getItem("upstairs"));
+			var flat = JSON.parse(localStorage.getItem("flat"));
+			function askType(){
+				var typeAns = prompt("Upstairs?");
+				if (typeAns == "yes"){
+					type = upstairs;
+					upstairs.startTemp.push(prompt("Start temperature(Fahrenheit)?"));
+					upstairs.endTemp.push(prompt("End temperature(Fahrenheit)?"));
+					upstairs.bestFit.push(prompt("Slope of heartbeat best-fit line?"));
+					upstairs.highestRate.push(prompt("Highest heartbeat rate?"));
+					localStorage.setItem("upstairs",JSON.stringify(upstairs))
+					console.log(JSON.parse(localStorage.getItem("upstairs")));
+				}
+				else if (typeAns == "no"){
+					type = flat;
+					flat.startTemp.push(prompt("Start temperature(Fahrenheit)?"));
+					flat.endTemp.push(prompt("End temperature(Fahrenheit)?"));
+					flat.bestFit.push(prompt("Slope of heartbeat best-fit line?"));
+					flat.highestRate.push(prompt("Highest heartbeat rate?"));
+					localStorage.setItem("flat",JSON.stringify(flat))
+					console.log(JSON.parse(localStorage.getItem("flat")));
+				}
+				else{
+					askType();
+				}
+			}
+			askType();
+			
+			
+		}
+		function view(){
+			document.write("<table><tr><th>Start Temp</th><th>End Temp</th><th>Best-fit Slope</th><th>Highest Heartrate</th><tr></table>")
+			var upstairs = JSON.parse(localStorage.getItem("upstairs"));
+			var flat = JSON.parse(localStorage.getItem("flat"));
+			//for (var i = )
+		}
+	</script>
+</head>
+<body>
+	<button onclick = "javascript:data()">Input</button>
+	<button onclick = "javascript:view()">Data</button>
+
+</body>
+</html>
