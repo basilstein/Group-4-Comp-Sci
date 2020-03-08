@@ -56,8 +56,9 @@
 			document.write("<table><tr><th>Trial #</th><th>Heartrate</th><tr>");
 			var uphill = JSON.parse(localStorage.getItem("uphill"));
 			var flat = JSON.parse(localStorage.getItem("flat"));
-			for (var i = 0; i <= uphill.trials.length,i++)
-			document.write("<tr><td>" + i + "</td><td>"+ uphill.trials[i] + "</td>");
+			for (var i = 0; i <= uphill.trials.length,i++){
+				document.write("<tr><td>" + i + "</td><td>"+ uphill.trials[i] + "</td>");
+			}
 			document.write("</table>");
 		}
 	</script>
