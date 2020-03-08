@@ -6,43 +6,41 @@
 	<title>Group 4 Data Collector</title>
 	<link rel="stylesheet" href="layout.css" type="text/css">
 	<script type = "text/javascript">
-		if (!localStorage.getItem("upstairs")){
-			var upstairs = new Object();
-			upstairs.startTemp = [];
-			upstairs.endTemp = [];
-			upstairs.bestFit = [];
-			upstairs.highestRate = [];
-			localStorage.setItem("upstairs",JSON.stringify(upstairs))
+		if (!localStorage.getItem("uphill")){
+			var uphill = new Object();
+			uphill.trials = [];
+			uphill.average;
+			localStorage.setItem("uphill",JSON.stringify(uphill))
 		}
 		if (!localStorage.getItem("flat")){
 			var flat = new Object();
-			flat.startTemp = [];
-			flat.endTemp = [];
-			flat.bestFit = [];
-			flat.highestRate = [];
-			localStorage.setItem("upstairs",JSON.stringify(upstairs))
+			flat.trials = [];
+			flat.average;
+			localStorage.setItem("flat",JSON.stringify(uphill))
 		}
 		function data(){
 			var type;
-			var upstairs = JSON.parse(localStorage.getItem("upstairs"));
+			var uphill = JSON.parse(localStorage.getItem("uphill"));
 			var flat = JSON.parse(localStorage.getItem("flat"));
 			function askType(){
-				var typeAns = prompt("Upstairs?");
+				var typeAns = prompt("Uphill?");
 				if (typeAns == "yes"){
-					type = upstairs;
-					upstairs.startTemp.push(prompt("Start temperature(Fahrenheit)?"));
-					upstairs.endTemp.push(prompt("End temperature(Fahrenheit)?"));
-					upstairs.bestFit.push(prompt("Slope of heartbeat best-fit line?"));
-					upstairs.highestRate.push(prompt("Highest heartbeat rate?"));
-					localStorage.setItem("upstairs",JSON.stringify(upstairs))
-					console.log(JSON.parse(localStorage.getItem("upstairs")));
+					type = uphill;
+					uphill.trials.unshift(prompt("Trial 1 Heartrate?"));
+					uphill.trials.unshift(prompt("Trial 2 Heartrate?"));
+					uphill.trials.unshift(prompt("Trial 3 Heartrate?"));
+					uphill.trials.unshift(prompt("Trial 4 Heartrate?"));
+					uphill.trials.unshift(prompt("Trial 5 Heartrate?"));
+					localStorage.setItem("uphill",JSON.stringify(uphill))
+					console.log(JSON.parse(localStorage.getItem("uphill")));
 				}
 				else if (typeAns == "no"){
 					type = flat;
-					flat.startTemp.push(prompt("Start temperature(Fahrenheit)?"));
-					flat.endTemp.push(prompt("End temperature(Fahrenheit)?"));
-					flat.bestFit.push(prompt("Slope of heartbeat best-fit line?"));
-					flat.highestRate.push(prompt("Highest heartbeat rate?"));
+					flat.trials.unshift(prompt("Trial 1 Heartrate?"));
+					flat.trials.unshift(prompt("Trial 1 Heartrate?"));
+					flat.trials.unshift(prompt("Trial 1 Heartrate?"));
+					flat.trials.unshift(prompt("Trial 1 Heartrate?"));
+					flat.trials.unshift(prompt("Trial 1 Heartrate?"));
 					localStorage.setItem("flat",JSON.stringify(flat))
 					console.log(JSON.parse(localStorage.getItem("flat")));
 				}
@@ -56,7 +54,7 @@
 		}
 		function view(){
 			document.write("<table><tr><th>Start Temp</th><th>End Temp</th><th>Best-fit Slope</th><th>Highest Heartrate</th><tr></table>")
-			var upstairs = JSON.parse(localStorage.getItem("upstairs"));
+			var uphill = JSON.parse(localStorage.getItem("uphill"));
 			var flat = JSON.parse(localStorage.getItem("flat"));
 			//for (var i = )
 		}
