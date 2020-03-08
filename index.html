@@ -53,10 +53,11 @@
 			
 		}
 		function view(){
-			document.write("<table><tr><th>Start Temp</th><th>End Temp</th><th>Best-fit Slope</th><th>Highest Heartrate</th><tr></table>")
+			document.write("<table><tr><th>Trial #</th><th>Heartrate</th><tr>");
 			var uphill = JSON.parse(localStorage.getItem("uphill"));
 			var flat = JSON.parse(localStorage.getItem("flat"));
-			//for (var i = )
+			document.write(
+			document.write("</table>");
 		}
 	</script>
 </head>
