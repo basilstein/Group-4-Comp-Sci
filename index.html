@@ -26,14 +26,12 @@
 				var typeAns = prompt("Uphill?");
 				if (typeAns == "yes"){
 					type = uphill;
-					console.log(uphill);
 					uphill.trials[1] = (prompt("Trial 1 Heartrate?"));
 					uphill.trials[2] = (prompt("Trial 2 Heartrate?"));
 					uphill.trials[3] = (prompt("Trial 3 Heartrate?"));
 					uphill.trials[4] = (prompt("Trial 4 Heartrate?"));
 					uphill.trials[5] = (prompt("Trial 5 Heartrate?"));
 					localStorage.setItem("uphill",JSON.stringify(uphill))
-					console.log(JSON.parse(localStorage.getItem("uphill")));
 				}
 				else if (typeAns == "no"){
 					type = flat;
@@ -43,7 +41,6 @@
 					flat.trials[4] = (prompt("Trial 4 Heartrate?"));
 					flat.trials[5] = (prompt("Trial 5 Heartrate?"));
 					localStorage.setItem("flat",JSON.stringify(flat))
-					console.log(JSON.parse(localStorage.getItem("flat")));
 				}
 				else{
 					askType();
@@ -58,9 +55,9 @@
 			var uphill = JSON.parse(localStorage.getItem("uphill"));
 			var flat = JSON.parse(localStorage.getItem("flat"));
 			console.log(uphill);
-			//for (var i = 0; i < uphill.trials.length,i++) {
+			for (var i = 0; i < uphill.trials.length,i++) {
 				//document.write("<tr><td>" + i + "</td><td>"+ uphill.trials[i] + "</td>");
-			//}
+			}
 			document.write("</table>");
 		}
 	</script>
