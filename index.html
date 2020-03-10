@@ -18,6 +18,9 @@
 			flat.average;
 			localStorage.setItem("flat",JSON.stringify(uphill))
 		}
+		function clearData(){
+			localStorage.clear();
+		}
 		function data(){
 			var type;
 			var uphill = JSON.parse(localStorage.getItem("uphill"));
@@ -56,6 +59,7 @@
 <body>
 	<a href = "table.html"><button>Table</button></a>
 	<button onclick = "javascript:data()">Data Input</button>
+	<button onclick = "javascript:clearData()">Clear Data</button>
 
 </body>
 </html>
