@@ -8,20 +8,21 @@
 	<script type = "text/javascript">
     function existCheck(){
       if (!localStorage.getItem("uphill")){
-        var uphill = new Object();
-        uphill.trials = [];
+        		  var uphill = new Object();
+        		  uphill.trials = [];
 			  uphill.average;
 			  localStorage.setItem("uphill",JSON.stringify(uphill))
 		  }
 		  if (!localStorage.getItem("flat")){
-        var flat = new Object();
+        		  var flat = new Object();
 			  flat.trials = [];
 			  flat.average;
 			  localStorage.setItem("flat",JSON.stringify(uphill))
 		  }
 	  }
     function chart(){
-      //import
+	    var Chart = require('chart.js');
+	    var myChart = new Chart(ctx, {...});
     }
 	</script>
 </head>
