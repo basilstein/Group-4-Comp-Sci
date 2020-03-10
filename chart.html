@@ -1,1 +1,31 @@
+<!doctype html>
 
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Group 4 Data Collector</title>
+	<link rel="stylesheet" href="layout.css" type="text/css">
+	<script type = "text/javascript">
+    function existCheck(){
+      if (!localStorage.getItem("uphill")){
+        var uphill = new Object();
+        uphill.trials = [];
+			  uphill.average;
+			  localStorage.setItem("uphill",JSON.stringify(uphill))
+		  }
+		  if (!localStorage.getItem("flat")){
+        var flat = new Object();
+			  flat.trials = [];
+			  flat.average;
+			  localStorage.setItem("flat",JSON.stringify(uphill))
+		  }
+	  }
+    function chart(){
+      //import
+    }
+	</script>
+</head>
+<body>
+	<a href = "index.html"><button>Back</button></a>
+</body>
+</html>
