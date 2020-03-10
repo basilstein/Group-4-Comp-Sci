@@ -4,3 +4,22 @@ table{
 th, td {
 	border: 2px solid black;
 }
+
+.backButton {
+	height: 30px;
+	width: 55px;
+	color: MidnightBlue;
+	background-color: NavajoWhite;
+}
+.dataButton {
+	height: 60px;
+	width: 90px;
+	color: Cyan;
+	background-color: Black;
+}
+.linkButton {
+	height: 85px;
+	width: 125px;
+	color: Indigo;
+	background-color: LightSteelBlue;
+}
