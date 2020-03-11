@@ -25,14 +25,14 @@
 		    var flat = JSON.parse(localStorage.getItem("flat"));
 		    document.write("Uphill");
 		    document.write("<table><tr><th>Trial #</th><th>Heartrate</th><tr>");
-		    for (var i = 0; i < uphill.trials.length - 1 ; i++) {
-			    document.write("<tr><td>" + i + "</td><td>"+ uphill.trials[i] + "</td>");
+		    for (var i = 0; i < uphill.trials.length ; i++) {
+			    document.write("<tr><td>" + (i+1) + "</td><td>"+ uphill.trials[i] + "</td>");
 		    }
 		    document.write("</table><br><br><br>");
 		    document.write("Flat");
 		    document.write("<table><tr><th>Trial #</th><th>Heartrate</th><tr>");
-		    for (var i = 0; i < flat.trials.length - 1; i++) {
-			    document.write("<tr><td>" + i + "</td><td>"+ flat.trials[i] + "</td>");
+		    for (var i = 0; i < flat.trials.length; i++) {
+			    document.write("<tr><td>" + (i+1) + "</td><td>"+ flat.trials[i] + "</td>");
 		    }
 		    document.write("</table>");
 	    }
