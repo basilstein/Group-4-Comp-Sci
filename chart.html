@@ -4,8 +4,11 @@
 </head>
 
 <body>
-	<div id='myDiv'>
+	<div id='Divid'>
 		<script>
+		function chart(){
+			JSON.parse(localStorage.getItem("flat");
+			JSON.parse(localStorage.getItem("uphill");
 			var trace1 = {
 			  x: [5, 5, 5, 5, 5],
 			  y: [flat.trials[0], flat.trials[1], flat.trials[2], flat.trials[3], flat.trials[4]],
@@ -20,9 +23,20 @@
 			  type: 'scatter'
 			};
 
-			var data = [trace1, trace2, trace3];
+			var data = [trace1, trace2];
+
+			Plotly.newPlot('Divid', data);
+			
+			var data = [
+  			{
+    			x: ['giraffes', 'orangutans', 'monkeys'],
+    			y: [20, 14, 23],
+			type: 'bar'
+  			}
+			];
 
 			Plotly.newPlot('myDiv', data);
+		}
 
 		</script>
 	</div>
