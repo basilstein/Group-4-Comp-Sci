@@ -8,9 +8,20 @@
 		var flat = JSON.parse(localStorage.getItem("flat"));
 		var uphill = JSON.parse(localStorage.getItem("uphill"));
 		function chart(){
+			var layout = {
+			  title: {
+			    text:'BPM Data for Flat(left) and Uphill(right) Trials',
+			    font: {
+			      family: 'Courier New, monospace',
+			      size: 24
+			    },
+			    xref: 'paper',
+			    x: 0.05,
+			
 			var trace1 = {
 			  x: [5, 5, 5, 5, 5],
 			  y: [flat.trials[0], flat.trials[1], flat.trials[2], flat.trials[3], flat.trials[4]],
+			  name: 'flat'
 			  mode: 'markers',
 			  type: 'scatter'
 			};
@@ -22,7 +33,7 @@
 			  type: 'scatter'
 			};
 
-			var data = [trace1, trace2];
+			var data = [trace1, trace2, layout];
 
 			Plotly.newPlot('Divid', data);
 			
