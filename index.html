@@ -29,20 +29,20 @@
 				var typeAns = prompt("Uphill?");
 				if (typeAns == "yes"){
 					type = uphill;
-					uphill.trials[1] = (prompt("Trial 1 Heartrate?"));
-					uphill.trials[2] = (prompt("Trial 2 Heartrate?"));
-					uphill.trials[3] = (prompt("Trial 3 Heartrate?"));
-					uphill.trials[4] = (prompt("Trial 4 Heartrate?"));
-					uphill.trials[5] = (prompt("Trial 5 Heartrate?"));
+					uphill.trials[0] = (prompt("Trial 1 Heartrate?"));
+					uphill.trials[1] = (prompt("Trial 2 Heartrate?"));
+					uphill.trials[2] = (prompt("Trial 3 Heartrate?"));
+					uphill.trials[3] = (prompt("Trial 4 Heartrate?"));
+					uphill.trials[4] = (prompt("Trial 5 Heartrate?"));
 					localStorage.setItem("uphill",JSON.stringify(uphill))
 				}
 				else if (typeAns == "no"){
 					type = flat;
-					flat.trials[1] = (prompt("Trial 1 Heartrate?"));
-					flat.trials[2] = (prompt("Trial 2 Heartrate?"));
-					flat.trials[3] = (prompt("Trial 3 Heartrate?"));
-					flat.trials[4] = (prompt("Trial 4 Heartrate?"));
-					flat.trials[5] = (prompt("Trial 5 Heartrate?"));
+					flat.trials[0] = (prompt("Trial 1 Heartrate?"));
+					flat.trials[1] = (prompt("Trial 2 Heartrate?"));
+					flat.trials[2] = (prompt("Trial 3 Heartrate?"));
+					flat.trials[3] = (prompt("Trial 4 Heartrate?"));
+					flat.trials[4] = (prompt("Trial 5 Heartrate?"));
 					localStorage.setItem("flat",JSON.stringify(flat))
 				}
 				else{
