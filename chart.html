@@ -22,8 +22,8 @@
 	  }
     function chart(){
 	    JSON.parse(localStorage.getItem("flat"));
-	    JSON.parse(localStorage.getItem("hill"));
-	    var Chart = require('chart.js');
+	    JSON.parse(localStorage.getItem("uphill"));
+	    var Chart = require("Chart.js");
             var scatterChart = new Chart(ctx, {
 	    type: 'scatter',
 	    data: {
