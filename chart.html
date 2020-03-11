@@ -37,20 +37,25 @@
 
 			Plotly.newPlot('Divid', data);
 			
-			var barData = [
-  			{
-    			x: ['Average flat bpm', 'Average uphill bpm'],
-    			y: [flat.average, uphill.average],
-			type: 'bar'
-  			}
-			];
-
-			Plotly.newPlot('Divid', barData);
+			
 		}
 			chart()
-		
-
 		</script>
 	</div>
+	<div id = 'Divid2'>
+		<script type = "text/javascript">
+		function chart2(){
+			var barData = [
+				{
+				x: ['Average flat bpm', 'Average uphill bpm'],
+				y: [flat.average, uphill.average],
+				type: 'bar'
+				}
+				];
+
+				Plotly.newPlot('Divid2', barData);
+		}
+			chart2()
+		</script>
 	<a class = "backButton" href = "index.html"><button>Back</button></a>
 </body>
