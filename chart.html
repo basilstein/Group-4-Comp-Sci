@@ -22,8 +22,8 @@
 		  }
 	  }
     function chart(){
-	    JSON.parse(localStorage.getItem("flat"));
-	    JSON.parse(localStorage.getItem("uphill"));
+	    var flat = JSON.parse(localStorage.getItem("flat"));
+	    var uphill = JSON.parse(localStorage.getItem("uphill"));
             var scatterChart = new Chart( {
 	    type: 'scatter',
 	    data: {
