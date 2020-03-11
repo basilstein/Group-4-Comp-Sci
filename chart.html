@@ -24,36 +24,36 @@
 	    var Chart = require('chart.js');
 	    var myChart = new Chart(ctx, {...});
              	var scatterChart = new Chart(ctx, {
-    type: 'scatter',
-    data: {
-        datasets: [{
-            label: 'Scatter Dataset',
-            data: [{
-                x: -10,
-                y: 0
-            }, {
-                x: 0,
-                y: 10
-            }, {
-                x: 10,
-                y: 5
-            }]
-        }]
-    },
-    options: {
-        scales: {
-            xAxes: [{
-                type: 'linear',
-                position: 'bottom'
-            }]
-        }
-    }
-});
-	    var myBarChart = new Chart(ctx, {
-    type: 'bar',
-    data: data,
-    options: options
-});
+	    type: 'scatter',
+	    data: {
+		datasets: [{
+		    label: 'Scatter Dataset',
+		    data: [{
+			x: -10,
+			y: 0
+		    }, {
+			x: 0,
+			y: 10
+		    }, {
+			x: 10,
+			y: 5
+		    }]
+		}]
+	    },
+	    options: {
+		scales: {
+		    xAxes: [{
+			type: 'linear',
+			position: 'bottom'
+		    }]
+		}
+	    }
+	});
+		    var myBarChart = new Chart(ctx, {
+	    type: 'bar',
+	    data: data,
+	    options: options
+	});
     }
 	</script>
 </head>
