@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title>Group 4 Data Collector</title>
 	<link rel="stylesheet" href="layout.css" type="text/css">
-	<script src="path/to/chartjs/dist/Chart.js"></script>
+	<script src="Chart.js"></script>
 	<script type = "text/javascript">
     function existCheck(){
       if (!localStorage.getItem("uphill")){
@@ -24,7 +24,6 @@
     function chart(){
 	    JSON.parse(localStorage.getItem("flat"));
 	    JSON.parse(localStorage.getItem("uphill"));
-	    var Chart = require("Chart.js");
             var scatterChart = new Chart(ctx, {
 	    type: 'scatter',
 	    data: {
