@@ -34,6 +34,11 @@
 					uphill.trials[2] = (prompt("Trial 3 Heartrate?"));
 					uphill.trials[3] = (prompt("Trial 4 Heartrate?"));
 					uphill.trials[4] = (prompt("Trial 5 Heartrate?"));
+					var sum;
+					for (var i = 0; i <= uphill.trials.length, i++){
+						sum = uphill.trials[i] + sum;
+					}
+					uphill.average = sum / 5;
 					localStorage.setItem("uphill",JSON.stringify(uphill))
 				}
 				else if (typeAns == "no"){
@@ -43,6 +48,11 @@
 					flat.trials[2] = (prompt("Trial 3 Heartrate?"));
 					flat.trials[3] = (prompt("Trial 4 Heartrate?"));
 					flat.trials[4] = (prompt("Trial 5 Heartrate?"));
+					var sum;
+					for (var i = 0; i <= flat.trials.length, i++){
+						sum = flat.trials[i] + sum;
+					}
+					flat.average = sum / 5;
 					localStorage.setItem("flat",JSON.stringify(flat))
 				}
 				else{
