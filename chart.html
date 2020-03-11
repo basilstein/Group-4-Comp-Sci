@@ -28,16 +28,39 @@
 	    type: 'scatter',
 	    data: {
 		datasets: [{
-		    label: 'Scatter Dataset',
+		    label: 'flat',
 		    data: [{
-			x: -10,
-			y: 0
+			x: 5,
+			y: flat.trials[0]
 		    }, {
-			x: 0,
-			y: 10
+			x: 5,
+			y: flat.trials[1]
+		    }, {
+			x: 5,
+			y: flat.trials[2]
+		    }, {
+			x: 5,
+			y: flat.trials[3]
+		    }, {
+			x: 5,
+			y: flat.trials[4]
+		    }]
+		    label: 'uphill',
+		    data: [{
+			x: 10,
+			y: uphill.trials[0]
 		    }, {
 			x: 10,
-			y: 5
+			y: uphill.trials[1]
+		    }, {
+			x: 10,
+			y: uphill.trials[2]
+		    }, {
+			x: 10,
+			y: uphill.trials[3]
+		    }, {
+			x: 10,
+			y: uphill.trials[4]
 		    }]
 		}]
 	    },
