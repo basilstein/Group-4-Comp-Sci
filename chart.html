@@ -1,5 +1,4 @@
 <head>
-	<!-- Load plotly.js into the DOM -->
 	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 </head>
 
@@ -27,7 +26,7 @@
 
 			Plotly.newPlot('Divid', data);
 			
-			var data = [
+			var barData = [
   			{
     			x: ['Average flat bpm', 'Average uphill bpm'],
     			y: [flat.average, uphill.average],
@@ -35,7 +34,8 @@
   			}
 			];
 
-			Plotly.newPlot('Divid', data);
+			Plotly.newPlot('Divid', barData);
+			
 		}
 
 		</script>
