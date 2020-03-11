@@ -46,6 +46,8 @@
 	<div id = 'Divid2'>
 		<script type = "text/javascript">
 		function chart2(){
+			var flat = JSON.parse(localStorage.getItem("flat"));
+			var uphill = JSON.parse(localStorage.getItem("uphill"));
 			var barData = [
 				{
 				x: ['Average flat bpm', 'Average uphill bpm'],
