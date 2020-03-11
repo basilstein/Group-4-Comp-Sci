@@ -31,17 +31,19 @@
 		    label: 'Scatter Dataset',
 		    data: [{
 			    for(var i ; < flat.trials.length; 1 i++){
-				    x: 5,
+				    {
+			            x: 5,
 			            y: flat.trials[i]
+				    },
 			    }
-			x: -10,
-			y: 0
-		    }, {
-			x: 0,
-			y: 10
-		    }, {
-			x: 10,
-			y: 5
+		    }]
+			data: [{
+			    for(var i ; < uphill.trials.length; 1 i++){
+				    {
+			            x: 15,
+			            y: uphill.trials[i]
+				    },
+			    }
 		    }]
 		}]
 	    },
