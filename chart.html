@@ -5,8 +5,8 @@
 <body>
 	<div id='Divid'>
 		<script>
-		JSON.parse(localStorage.getItem("flat"));
-		JSON.parse(localStorage.getItem("uphill"));
+		var flat = JSON.parse(localStorage.getItem("flat"));
+		var uphill = JSON.parse(localStorage.getItem("uphill"));
 		function chart(){
 			var trace1 = {
 			  x: [5, 5, 5, 5, 5],
